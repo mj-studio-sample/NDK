@@ -140,3 +140,75 @@ void StringConverter::reverseString(char *src, char *dest) {
     }
 }
 ```
+
+### NativeLib.kt
+```kotlin
+interface Callback {
+    fun onStringReversed(str: String)
+}
+
+class NativeLib : Callback {
+
+    private val TAG = NativeLib::class.java.simpleName
+
+    companion object {
+        init {
+            System.loadLibrary("native")
+        }
+    }
+
+    private val callbacks = mutableListOf<Callback>()
+
+    fun addCallback(callback: Callback) {
+        callbacks.add(callback)
+    }
+
+    fun removeCallback(callback: Callback): Boolean {
+        return callbacks.remove(callback)
+    }
+
+
+    external fun printLog()
+
+    external fun returnString(): String
+
+    external fun reverseString(str: String): String
+
+    external fun reverseStringWithCallback(str: String)
+
+    override fun onStringReversed(str: String) {
+        callbacks.forEach {
+            it.onStringReversed(str)
+        }
+    }
+}
+```
+
+### MainActivity.kt
+```kotlin
+class MainActivity : AppCompatActivity() {
+
+    private val TAG = MainActivity::class.java.simpleName
+
+    private val native = NativeLib()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        native.addCallback(object : Callback {
+            override fun onStringReversed(str: String) {
+                reverseText2.text = str
+            }
+        })
+
+        reverse.setOnClickListener {
+            reverseText.text = native.reverseString(original.text.toString())
+        }
+
+        reverse2.setOnClickListener {
+            native.reverseStringWithCallback(original2.text.toString())
+        }
+    }
+}
+```
