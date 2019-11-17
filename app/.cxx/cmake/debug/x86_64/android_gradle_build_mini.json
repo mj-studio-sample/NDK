@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Users/mj/Desktop/NDK/app/src/main/jni/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/mj/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/mj/Desktop/NDK/app/.cxx/cmake/debug/x86_64 --target clean"
+  ],
+  "libraries": {
+    "native-Debug-x86_64": {
+      "artifactName": "native",
+      "buildCommand": "/Users/mj/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/mj/Desktop/NDK/app/.cxx/cmake/debug/x86_64 --target native",
+      "abi": "x86_64",
+      "output": "/Users/mj/Desktop/NDK/app/build/intermediates/cmake/debug/obj/x86_64/libnative.so"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+[1/3] Building CXX object CMakeFiles/native.dir/native.cpp.o
+[2/3] Building CXX object CMakeFiles/native.dir/StringConverter.cpp.o
+[3/3] Linking CXX shared library /Users/mj/Desktop/NDK/app/build/intermediates/cmake/debug/obj/x86/libnative.so

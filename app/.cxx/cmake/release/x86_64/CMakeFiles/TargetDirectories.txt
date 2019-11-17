@@ -1,0 +1,3 @@
+/Users/mj/Desktop/NDK/app/.cxx/cmake/release/x86_64/CMakeFiles/edit_cache.dir
+/Users/mj/Desktop/NDK/app/.cxx/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir
+/Users/mj/Desktop/NDK/app/.cxx/cmake/release/x86_64/CMakeFiles/native.dir
