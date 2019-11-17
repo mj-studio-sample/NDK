@@ -6,62 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/original2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Reverse with Callback"
-        app:layout_constraintEnd_toStartOf="@+id/reverse"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/original"
-        />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/reverse2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="reverse"
-        app:layout_constraintBottom_toBottomOf="@id/original2"
-        app:layout_constraintEnd_toStartOf="@+id/reverseText"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/original2"
-        app:layout_constraintTop_toTopOf="@id/original2" />
-
-    <TextView
-
-        android:id="@+id/reverseText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="@id/reverse2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/reverse2"
-        app:layout_constraintTop_toTopOf="@id/reverse2" />
 
     <TextView
         android:id="@+id/original"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Reverse with general Func"
-        app:layout_constraintEnd_toStartOf="@+id/reverse"
+        android:text="My hobby is NDK"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
+        android:textColor="#000"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:id="@+id/reverse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="reverse"
-        app:layout_constraintBottom_toBottomOf="@id/original"
-        app:layout_constraintEnd_toStartOf="@+id/reverseText"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/original"
-        app:layout_constraintTop_toTopOf="@id/original" />
+        android:text="Reverse String With NDK &amp; JNI"
+        app:layout_constraintTop_toBottomOf="@id/original"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
 
     <TextView
 
@@ -69,10 +39,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="@id/reverse"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/reverse"
-        app:layout_constraintTop_toTopOf="@id/reverse" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reverse"
+        android:layout_marginTop="12dp"
+
+        />
+
+    <TextView
+
+        android:id="@+id/original2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="My hobby is JNI"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reverseText"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:textColor="#000"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:layout_constraintTop_toBottomOf="@id/original2"
+        android:id="@+id/reverse2"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reverse String With NDK &amp; JNI &amp; Callback"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/reverse2"
+        android:id="@+id/reverseText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="12dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
